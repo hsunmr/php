@@ -13,7 +13,7 @@ class Stats {
     }
  }
  class Skill {
-    public $name;        // 技能名稱
+    public $name;        // 技能名稱123
     public $description; // 技能描述
     function __construct($sourceName, $sourceDescription){
          $this->name = $sourceName;
