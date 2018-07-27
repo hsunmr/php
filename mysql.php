@@ -213,10 +213,10 @@ class DatabaseAccessObject {
     }
 }
 
-$mysql_address = "10.10.85.189"; // 通常是連接同一台機器，如果是遠端就設 IP
-$mysql_username = "Hsun";     // 設定連接資料庫用戶帳號
-$mysql_password = "ww311752"; // 設定連接資料庫用戶的密碼
-$mysql_database = "hero";     // 設成你在 mysql 創的資料庫
+$mysql_address = "localhost"; // 通常是連接同一台機器，如果是遠端就設 IP
+$mysql_username = "username";     // 設定連接資料庫用戶帳號
+$mysql_password = "password"; // 設定連接資料庫用戶的密碼
+$mysql_database = "database";     // 設成你在 mysql 創的資料庫
 $DAO = new DatabaseAccessObject($mysql_address, $mysql_username, $mysql_password, $mysql_database);
 // 要新增資料就：
 $table = "hero"; // 設定你想新增資料的資料表
