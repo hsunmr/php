@@ -18,7 +18,10 @@ class DatabaseAccessObject {
         $this->mysql_username = $mysql_username;
         $this->mysql_password = $mysql_password;
         $this->mysql_database = $mysql_database;
-
+        echo "<BR>address: " . $this->mysql_address;
+        echo "<BR>address: " . $this->mysql_username;
+        echo "<BR>address: " . $this->mysql_password;
+        echo "<BR>address: " . $this->mysql_database . "<BR>";
         $this->link = ($GLOBALS["___mysqli_ston"] = mysqli_connect($this->mysql_address, $this->mysql_username, $this->mysql_password));
 
         if (mysqli_connect_errno())
@@ -80,6 +83,7 @@ class DatabaseAccessObject {
      * 這段可以新增資料庫中的資料，並把最後一筆的 ID 存到變數中，可以用 getLastId() 取出
      */
     public function insert($table = null, $data_array = array()) {
+        echo "123";
         if($table===null)return false;
         if(count($data_array) == 0) return false;
 
@@ -95,9 +99,9 @@ class DatabaseAccessObject {
         $data = join(",", $tmp_dat);
 
         $this->last_sql = "INSERT INTO " . $table . "(" . $columns . ")VALUES(" . $data . ")";
-
+        echo $this->last_sql ;
         mysqli_query($this->link, $this->last_sql);
-
+        echo "123";
         if (((is_object($this->link)) ? mysqli_error($this->link) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false))) {
             echo "MySQL Update Error: " . ((is_object($this->link)) ? mysqli_error($this->link) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false));
         } else {
@@ -181,7 +185,7 @@ class DatabaseAccessObject {
     }
 
     /**
-     * @return int
+     * @return int  
      */
     public function getLastNumRows() {
         return $this->last_num_rows;
@@ -212,10 +216,11 @@ class DatabaseAccessObject {
         $this->error_message = $error_message;
     }
 }
+//$db = new MySQL();
 
-$mysql_address = "10.10.85.189"; // 通常是連接同一台機器，如果是遠端就設 IP
-$mysql_username = "Hsun";     // 設定連接資料庫用戶帳號
-$mysql_password = "ww311752"; // 設定連接資料庫用戶的密碼
+/*$mysql_address = "10.10.85.189"; // 通常是連接同一台機器，如果是遠端就設 IP
+$mysql_username = "Hsun";     // 
+$mysql_password ="ww311752"; // 設定連接資料庫用戶的密碼
 $mysql_database = "hero";     // 設成你在 mysql 創的資料庫
 $DAO = new DatabaseAccessObject($mysql_address, $mysql_username, $mysql_password, $mysql_database);
 // 要新增資料就：
@@ -249,5 +254,5 @@ $table = "hero";
 $key_column = "hero_id";
 $id = 1; // 我們假設要刪除 hero_id = 1 的英雄
 $DAO->delete($table, $key_column, $id); 
-// 一行搞定
+// 一行搞定*/
 ?>

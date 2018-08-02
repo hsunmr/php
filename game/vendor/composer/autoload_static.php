@@ -29,7 +29,9 @@ class ComposerStaticInit10cecc0c8ae5bb1af07832f6f831d257
     );
 
     public static $classMap = array (
+        'Database' => __DIR__ . '/../..' . '/libraries/Database.php',
         'DatabaseAccessObject' => __DIR__ . '/../..' . '/libraries/mysql.php',
+        'MySQL' => __DIR__ . '/../..' . '/config/MySQL.php',
         'Request' => __DIR__ . '/../..' . '/libraries/Request.php',
         'Router' => __DIR__ . '/../..' . '/libraries/Router.php',
     );
