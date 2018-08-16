@@ -219,10 +219,10 @@ class DatabaseAccessObject {
 //$db = new MySQL();
 
 <<<<<<< HEAD
-/*$mysql_address = "10.10.85.189"; // 通常是連接同一台機器，如果是遠端就設 IP
-$mysql_username = "Hsun";     // 
-$mysql_password ="ww311752"; // 設定連接資料庫用戶的密碼
-$mysql_database = "hero";     // 設成你在 mysql 創的資料庫
+/*$mysql_address = ""; // 通常是連接同一台機器，如果是遠端就設 IP
+$mysql_username = "";     // 
+$mysql_password =""; // 設定連接資料庫用戶的密碼
+$mysql_database = "";     // 設成你在 mysql 創的資料庫
 =======
 $mysql_address = "localhost"; // 通常是連接同一台機器，如果是遠端就設 IP
 $mysql_username = "username";     // 設定連接資料庫用戶帳號
