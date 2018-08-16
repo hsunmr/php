@@ -1,9 +1,9 @@
 <?php
 class MySQL {
-   const ADDRESS = "10.10.85.189";
-   const USERNAME = "Hsun";
-   const PASSWORD = "ww311752";
-   const DATABASE = "hero";
+   const ADDRESS = "";
+   const USERNAME = "";
+   const PASSWORD = "";
+   const DATABASE = "";
 
  /* function getaddress()
   {
